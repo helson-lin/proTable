@@ -1,0 +1,49 @@
+{
+    "logo": "PROTABLE",
+    "menu": [
+        {
+            "name": "首页",
+            "enName": "Home",
+            "path": "/"
+        },
+        {
+            "name": "项目",
+            "enName": "Project",
+            "path": "/project",
+            "children": [
+                {
+                    "name": "FanoView",
+                    "path": "http://182.61.138.196:8088/",
+                    "img": "",
+                    "description": ""
+                },
+                {
+                    "name": "PROTABLE",
+                    "path": "/",
+                    "img": "",
+                    "description": ""
+                },
+                {
+                    "name": "Express-MVC",
+                    "path": "",
+                    "img": "",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "projectList": [
+        {
+            "name": "FanoView"
+        }
+    ],
+    "personInfo": {
+        "name": "Lin",
+        "introduce": "Work experience is very important, some people may have more experience, like a running account said all the way. In fact, the interviewer is listening for key words, how much of your past experience overlaps with the current position, the rest of your experience need not be mentioned."
+    },
+    "contact": {
+        "GitHub": "https://github.com",
+        "CSDN": "https://csdn.com",
+        "Email": "helsonlin@163.com"
+    }
+}

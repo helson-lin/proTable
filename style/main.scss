@@ -1,0 +1,15 @@
+@font-face {
+    font-family: HarmonyOS Sans;
+    src: url(https://pic.kblue.site/img/HarmonyOS_Sans_Regular.ttf);
+}
+@font-face {
+    font-family: OpenSans;
+    src: url(https://pic.kblue.site/img/Open-Sans-2.ttf);
+}
+@font-face {
+    font-family: Furore;
+    src: url(https://pic.kblue.site/img/Furore-2.otf);
+}
+
+@import "./base/reset.scss";
+@import "./ooc/index.scss";
