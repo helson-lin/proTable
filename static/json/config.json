@@ -22,19 +22,8 @@
                     "path": "/",
                     "img": "",
                     "description": ""
-                },
-                {
-                    "name": "Express-MVC",
-                    "path": "",
-                    "img": "",
-                    "description": ""
                 }
             ]
-        }
-    ],
-    "projectList": [
-        {
-            "name": "FanoView"
         }
     ],
     "personInfo": {

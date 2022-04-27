@@ -21,7 +21,6 @@ const personInfo = ref({});
 const contact = ref({});
 personInfo.value = CONFIG.personInfo;
 contact.value = CONFIG.contact;
-console.warn(CONFIG);
 const initTyper = () => {
     const Typer = new TyperText({
         el: "#introduce-txt",
