@@ -4,7 +4,10 @@
             <h1>您好，{{ personInfo.name }}</h1>
             <p id="introduce-txt"></p>
         </div>
-        <Button class="round">Information</Button>
+        <Button class="round">
+            个人简历
+            <Icon type="icon-xiazai"></Icon>
+        </Button>
         <div class="contact-way">
             <Button class="circle white" v-for="way in contactList" :key="way">
                 <Icon :type="`icon-${way.name}`" @click="jump(way)" />
@@ -21,7 +24,6 @@ const personInfo = ref({});
 const contact = ref({});
 personInfo.value = CONFIG.personInfo;
 contact.value = CONFIG.contact;
-console.warn(CONFIG);
 const initTyper = () => {
     const Typer = new TyperText({
         el: "#introduce-txt",
@@ -49,10 +51,10 @@ const contactList = computed(() => {
 });
 const jump = (way) => {
     const { url, name } = way;
-    if(name !== 'Email') {
-        window.open(url, '_blank');
+    if (name !== "Email") {
+        window.open(url, "_blank");
     } else {
-        window.open(`mailto: ${url}`, '_blank');
+        window.open(`mailto: ${url}`, "_blank");
     }
 };
 onMounted(() => {
@@ -65,6 +67,13 @@ onMounted(() => {
     z-index: 2;
     width: 80%;
     margin: 0 auto;
+    .round {
+        display: flex;
+        align-items: center;
+        .icon {
+            margin-left: 5px;
+        }
+    }
     #introduce-txt {
         width: 70%;
         margin: 40px 0;

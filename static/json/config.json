@@ -22,12 +22,6 @@
                     "path": "/",
                     "img": "",
                     "description": ""
-                },
-                {
-                    "name": "Express-MVC",
-                    "path": "",
-                    "img": "",
-                    "description": ""
                 }
             ]
         }
@@ -38,12 +32,12 @@
         }
     ],
     "personInfo": {
-        "name": "Lin",
-        "introduce": "Work experience is very important, some people may have more experience, like a running account said all the way. In fact, the interviewer is listening for key words, how much of your past experience overlaps with the current position, the rest of your experience need not be mentioned."
+        "name": "Helson Lin",
+        "introduce": "热爱Coding、伪二次元追番人、<br/> Front Developer"
     },
     "contact": {
-        "GitHub": "https://github.com",
-        "CSDN": "https://csdn.com",
+        "GitHub": "https://github.com/helson-lin",
+        "CSDN": "https://blog.csdn.net/qq_37651169",
         "Email": "helsonlin@163.com"
     }
 }

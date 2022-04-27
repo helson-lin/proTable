@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     app: {
         head: {
             script: [
-                { src: "//at.alicdn.com/t/font_2913738_vovj4fbnhvi.js" },
+                { src: "//at.alicdn.com/t/font_2913738_ldt6x3k3y.js" },
             ],
         },
     },

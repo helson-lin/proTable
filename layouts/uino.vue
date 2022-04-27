@@ -50,7 +50,7 @@ onMounted(() => {
         <div class="lin-content">
             <slot></slot>
         </div>
-        <footer>FOOTER</footer>
+        <footer>POWER BY NUXT3</footer>
     </div>
 </template>
 <style lang="scss">

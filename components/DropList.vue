@@ -26,7 +26,6 @@ const showList = ref(true);
 const hover = ($event) => {
     if ($event.target.classList.value.indexOf("link") !== -1) return;
     // showList.value = !showList.value;
-    console.warn("val", $event.target.classList, $event.type);
 };
 </script>
 <style lang="scss" scoped>
