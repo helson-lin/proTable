@@ -6,14 +6,21 @@ export default defineNuxtConfig({
         "~": "/<rootDir>",
         $json: "/static/json",
     },
-    css: [
-        "@/style/main.scss",
-    ],
+    css: ["@/style/main.scss"],
     app: {
         head: {
-            script: [
-                { src: "//at.alicdn.com/t/font_2913738_ldt6x3k3y.js" },
+            link: [{ src: "/static/favicon.ico", rel: "shortcut icon" }],
+            meta: [
+                {
+                    name: "description",
+                    content: "ProTable A Personal Project Display Platform",
+                },
             ],
+            title: "ProTable",
+            script: [{ src: "//at.alicdn.com/t/font_2913738_vovj4fbnhvi.js" }],
         },
+    },
+    dir: {
+        public: "static",
     },
 });

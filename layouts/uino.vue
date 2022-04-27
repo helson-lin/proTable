@@ -3,11 +3,9 @@ import CONFIG from "$json/config.json";
 import DropList from "@/components/DropList.vue";
 const borWdRef = ref("");
 const menuList = ref([]);
-const projectList = ref([]);
 const logoName = ref("");
 menuList.value = CONFIG.menu;
 logoName.value = CONFIG.logo;
-projectList.value = CONFIG.projectList;
 
 const randomScale = () => {
     const num = Math.random() * 10;
