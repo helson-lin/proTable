@@ -38,5 +38,31 @@ jobs:
       - name: Npm Build
         run: npm run build
         
-      - name: Echo
-        run: echo "Fininsh"
+      - name: Compress
+        run: tar -zcvf release.tgz .output
+        # 发布 Release
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Deploy
+          uses: appleboy/ssh-action@main
+          with:
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.USERNAME }}
+            password: ${{ secrets.PASSWORD }}
+            port: ${{ secrets.PORT }}
+            script: |
+              cd /home/project/protable
+              rm -rf *
+              wget https://github.com/helson-lin/proTable.git -O release.tgz
+              tar zxvf release.tgz
+              npm install
