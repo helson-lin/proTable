@@ -1,15 +1,19 @@
 <template>
     <div class="lin-card">
         <div class="introduce">
-            <h1>您好，{{ personInfo.name }}</h1>
+            <h1>您好，我是{{ personInfo.name }}</h1>
             <p id="introduce-txt"></p>
         </div>
-        <Button class="round">Information</Button>
+        <Button class="round">
+            个人简历
+            <Icon type="icon-xiazai" @click="openResume"></Icon>
+        </Button>
         <div class="contact-way">
             <Button class="circle white" v-for="way in contactList" :key="way">
                 <Icon :type="`icon-${way.name}`" @click="jump(way)" />
             </Button>
         </div>
+        <!-- <iframe id="pro" src="http://182.61.138.196:8088/" frameborder="0"></iframe> -->
     </div>
 </template>
 <script setup>
@@ -48,12 +52,15 @@ const contactList = computed(() => {
 });
 const jump = (way) => {
     const { url, name } = way;
-    if(name !== 'Email') {
-        window.open(url, '_blank');
+    if (name !== "Email") {
+        window.open(url, "_blank");
     } else {
-        window.open(`mailto: ${url}`, '_blank');
+        window.open(`mailto: ${url}`, "_blank");
     }
 };
+const openResume = () => {
+    window.open(personInfo.value.onlineResume, '_blank')
+}
 onMounted(() => {
     initTyper();
 });
@@ -64,6 +71,13 @@ onMounted(() => {
     z-index: 2;
     width: 80%;
     margin: 0 auto;
+    .round {
+        display: flex;
+        align-items: center;
+        .icon {
+            margin-left: 5px;
+        }
+    }
     #introduce-txt {
         width: 70%;
         margin: 40px 0;
@@ -73,6 +87,14 @@ onMounted(() => {
         .lin-btn {
             margin-right: 10px;
         }
+    }
+    #pro {
+        position: absolute;
+        top: -80%;
+        width: 1920px;
+        height: 1080px;
+        transform: scale(0.4);
+        background-color: #fff;
     }
 }
 </style>

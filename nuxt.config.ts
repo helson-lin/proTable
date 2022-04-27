@@ -17,7 +17,7 @@ export default defineNuxtConfig({
                 },
             ],
             title: "ProTable",
-            script: [{ src: "//at.alicdn.com/t/font_2913738_vovj4fbnhvi.js" }],
+            script: [{ src: "//at.alicdn.com/t/font_2913738_ldt6x3k3y.js" }],
         },
     },
     dir: {
