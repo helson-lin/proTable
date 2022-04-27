@@ -57,6 +57,8 @@ onMounted(() => {
     position: relative;
     width: 100%;
     height: 100%;
+    // background-image: url('https://pic.kblue.site/img/20220427204409.png');
+    // background-size: 100% 100%;
     &::after {
         position: absolute;
         left: 2%;
@@ -127,6 +129,7 @@ onMounted(() => {
         background: rgba($color: #fff, $alpha: 0.2);
         backdrop-filter: blur(20px);
         box-shadow: 0 2px 2px 2px rgba(96, 120, 234, 0.1);
+        z-index: 2;
     }
     .lin-content {
         width: 100%;

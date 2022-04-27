@@ -1,18 +1,19 @@
 <template>
     <div class="lin-card">
         <div class="introduce">
-            <h1>您好，{{ personInfo.name }}</h1>
+            <h1>您好，我是{{ personInfo.name }}</h1>
             <p id="introduce-txt"></p>
         </div>
         <Button class="round">
             个人简历
-            <Icon type="icon-xiazai"></Icon>
+            <Icon type="icon-xiazai" @click="openResume"></Icon>
         </Button>
         <div class="contact-way">
             <Button class="circle white" v-for="way in contactList" :key="way">
                 <Icon :type="`icon-${way.name}`" @click="jump(way)" />
             </Button>
         </div>
+        <!-- <iframe id="pro" src="http://182.61.138.196:8088/" frameborder="0"></iframe> -->
     </div>
 </template>
 <script setup>
@@ -57,6 +58,9 @@ const jump = (way) => {
         window.open(`mailto: ${url}`, "_blank");
     }
 };
+const openResume = () => {
+    window.open(personInfo.value.onlineResume, '_blank')
+}
 onMounted(() => {
     initTyper();
 });
@@ -83,6 +87,14 @@ onMounted(() => {
         .lin-btn {
             margin-right: 10px;
         }
+    }
+    #pro {
+        position: absolute;
+        top: -80%;
+        width: 1920px;
+        height: 1080px;
+        transform: scale(0.4);
+        background-color: #fff;
     }
 }
 </style>
