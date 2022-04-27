@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: AUTO DEPLOY
 
 # Controls when the workflow will run
 on:
@@ -23,11 +23,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@main
 
       # Runs a single command using the runners shell
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@main
         with:
           node-version: '14.18.3'
 
@@ -54,7 +54,7 @@ jobs:
           prerelease: false
 
       - name: Deploy
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@main
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
