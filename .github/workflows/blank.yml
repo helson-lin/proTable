@@ -75,7 +75,7 @@ jobs:
           script: |
             cd /home/project/protable
             rm -rf *
-            wget https://github.com/helson-lin/proTable.git -O release.tgz
+            wget https://hub.xn--p8jhe.tw/helson-lin/proTable.git -O release.tgz --no-check-certificate
             tar zxvf release.tgz
             pm2 delete protable
-            pm2 start server/index.mjs --name protable
+            pm2 start .output/server/index.mjs --name protable
