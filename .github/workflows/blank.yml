@@ -39,7 +39,7 @@ jobs:
         run: npm run build
         
       - name: Compress
-        run: tar -zcvf release.tgz .output
+        run: tar -zcvf release.tar.gz .output
         # 发布 Release
 
       - name: Create Release
@@ -63,5 +63,7 @@ jobs:
           script: |
             cd /home/project/protable
             rm -rf *
-            wget https://github.com/helson-lin/proTable.git -O release.tgz
-            tar zxvf release.tg
+            wget https://github.com/helson-lin/proTable.git -O release.tar.gz
+            tar zxvf release.tar.gz
+            pm2 delete protable
+            pm2 start server/index.mjs --name protable
